@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registros de Entrega</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container mt-5">
+		<h1>Registros de Entrega</h1>
+		<form>
+			<div class="row mt-4">
+				<div class="col-md-3">
+					<label for="data" class="form-label">Data:</label>
+					<input type="date" id="data" name="data" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="saida" class="form-label">Saída:</label>
+					<input type="number" id="saida" name="saida" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="chegada" class="form-label">Chegada:</label>
+					<input type="number" id="chegada" name="chegada" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="rota" class="form-label">Rota:</label>
+					<input type="text" id="rota" name="rota" class="form-control">
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-3">
+					<label for="recusados" class="form-label">Recusados:</label>
+					<input type="number" id="recusados" name="recusados" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="quebrados" class="form-label">Quebrados:</label>
+					<input type="number" id="quebrados" name="quebrados" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="danificados" class="form-label">Danificados:</label>
+					<input type="number" id="danificados" name="danificados" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="vencidos" class="form-label">Vencidos:</label>
+					<input type="number" id="vencidos" name="vencidos" class="form-control">
+				</div>
+			</div>
+			<div class="mt-4">
+				<button type="button" id="btn-registrar" class="btn btn-primary">Registrar</button>
+				<div>
+                    <button type="button" id="btn-registros" class="btn btn-primary">Ver Registros</button>
+                  </div>
+                  
+                  <script>
+                  // Seleciona o botão de registros
+                  const btnRegistros = document.getElementById("btn-registros");
+                  
+                  // Adiciona um ouvinte de eventos ao botão
+                  btnRegistros.addEventListener("click", () => {
+                    window.location.href = "registros.html";
+                  });
+                            </script>        
+			</div>
+		</form>
+		<table class="table table-striped mt-5">
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Saída</th>
+					<th>Chegada</th>
+					<th>Rota</th>
+					<th>Recusados</th>
+					<th>Quebrados</th>
+					<th>Danificados</th>
+					<th>Vencidos</th>
+				</tr>
+			</thead>
+			<tbody id="tbody-registros">
+			</tbody>
+		</table>
+	</div>
+	
+
+  </body>
+</html>
